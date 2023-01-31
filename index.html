@@ -20,9 +20,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>
-    <script src="https://kit.fontawesome.com/41ffbbbc55.js" crossorigin="anonymous"> </script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="" />
@@ -40,12 +37,11 @@
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
 
 
-    <!-- Animate.css -->
+    <!-- Animate.css & AOS -->
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Icomoon Icon Fonts-->
     <link rel="stylesheet" href="css/icomoon.css">
-    <!-- Bootstrap  -->
-    <link rel="stylesheet" href="css/bootstrap.css">
 
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -66,11 +62,78 @@
 </head>
 
 <body>
+
+
+    <!-- modal -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog text-center modal-fullscreen">
+      <section class="container-fluid bgmodal">
+        <div class="container text-center">
+          <div class="display-tc animate-box" data-animate-effect="fadeIn">
+            <h4 class="display-6" data-aos="fade-up" data-aos-duration="1600">The Wedding Of</h4>
+            <br>
+            <h3 class="display-3" data-aos="fade-up" data-aos-duration="1800">Jefry & Leiya</h3>
+            <br>
+            <h6 data-aos="fade-up" data-aos-duration="2000">You are cordially invited to our wedding. </h6>
+            <br>
+            <br>
+           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Buka Undangan</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- JavaScript and dependencies -->
+
+  <script src="./app.js"></script>
+  <script>
+    var myModal = new bootstrap.Modal(document.getElementById("exampleModal"), {});
+    document.onreadystatechange = function () {
+      myModal.show();
+    };
+  </script>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog text-center modal-fullscreen">
+      <section class="container-fluid bgmodal">
+        <div class="container text-center">
+          <div class="display-tc animate-box" data-animate-effect="fadeIn">
+            <h4 class="display-6" data-aos="fade-up" data-aos-duration="1600">The Wedding Of</h4>
+            <br>
+            <h3 class="display-3" data-aos="fade-up" data-aos-duration="1800">Jefry & Leiya</h3>
+            <br>
+            <h6 data-aos="fade-up" data-aos-duration="2000">You are cordially invited to our wedding. </h6>
+            <br>
+            <br>
+           <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Buka Undangan</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- JavaScript and dependencies -->
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+  </script>
+
+  <script src="./app.js"></script>
+  <script>
+    var myModal = new bootstrap.Modal(document.getElementById("exampleModal"), {});
+    document.onreadystatechange = function () {
+      myModal.show();
+    };
+  </script>
+
+    <!-- NAVBAR BAWAH -->
     <nav class="fixed-bottom">
         <div class="navigation">
             <ul>
                 <li class="list active">
-                    <a href="#">
+                    <a href="#story">
                         <span class="icon">
                             <ion-icon name="heart-outline"></ion-icon>
                         </span>
@@ -78,7 +141,7 @@
                     </a>
                 </li>
                 <li class="list">
-                    <a href="#">
+                    <a href="#waktu">
                         <span class="icon">
                             <ion-icon name="calendar-outline"></ion-icon>
                         </span>
@@ -86,7 +149,7 @@
                     </a>
                 </li>
                 <li class="list">
-                    <a href="#">
+                    <a href="#galeri">
                         <span class="icon">
                             <ion-icon name="camera-outline"></ion-icon>
                         </span>
@@ -94,7 +157,7 @@
                     </a>
                 </li>
                 <li class="list">
-                    <a href="#">
+                    <a href="#kado">
                         <span class="icon">
                             <ion-icon name="gift-outline"></ion-icon>
                         </span>
@@ -108,80 +171,83 @@
     <section class="container-fluid banner">
         <div class="container text-center">
             <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                <h4 class="display-6">The Wedding Of</h4>
+                <h4 class="display-6" data-aos="fade-up" data-aos-duration="1600">The Wedding Of</h4>
                 <br>
-                <h3 class="display-3">Jefry & Leiya</h3>
+                <h3 class="display-3" data-aos="fade-up" data-aos-duration="1800">Jefry & Leiya</h3>
                 <br>
-                <h4 class="display-6">01 . Juli . 2023</h4>
+                <h4 class="display-6" data-aos="fade-up" data-aos-duration="2000">01 . Juli . 2023</h4>
                 <!-- <h2 class="demo" id="demo"></h2> -->
             </div>
         </div>
     </section>
-    
+    <!-- audio -->
+      <!-- hal2 -->
     <div class="container hal-2">
-        <div class="custom-shape-divider-bottom-1675089837">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z" class="shape-fill"></path>
-            </svg>
-        </div>
         <div class="display-tc animate-box" data-animate-effect="fadeIn">
             <div class="row text-center">
-                <h3 class="display-6 txt-hitam pb-5">The Beloved</h3>
-                <span class="display-3 txt-coklat">Jefry & Leiya</span>
-                <p class="txt-standart"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit natus iure
+                <h3 class="display-6 txt-hitam pb-5" data-aos="fade-up" data-aos-duration="1600">The Beloved</h3>
+                <span class="display-3 txt-coklat" data-aos="fade-up" data-aos-duration="1800">Jefry & Leiya</span>
+                <p class="txt-standart" data-aos="fade-up" data-aos-duration="2000"> Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Velit natus iure
                     qui
                     ipsa reprehenderit repellat.
                 </p>
             </div>
         </div>
-        <hr class="garis-pemisah">
+        <hr class="garis-pemisah" data-aos="fade-left" data-aos-duration="500">
     </div>
 
-    <div class="container-fluid banner2">
-        <div class="container hal-2">
-            <h2 class="text-center">Hello!</h2>
-            <p class="txt-standart text-center">Juli 01, 2023 Banyuwangi</p>
-            <p class="txt-standart text-center">Kami Mengundangmu Untuk Bersama Sama Merayakan Pernikahan Kami</p>
+    <div class="container-fluid banner2" data-aos="fade-up" data-aos-duration="1600">
+        <div id="story" class="container hal-2">
+            <h2 class="text-center" data-aos="fade-up" data-aos-duration="1600">Hello!</h2>
+            <p class="txt-standart text-center" data-aos="fade-up" data-aos-duration="1800">Juli 01, 2023 Banyuwangi</p>
+            <p class="txt-standart text-center" data-aos="fade-up" data-aos-duration="2000">Kami Mengundangmu Untuk
+                Bersama Sama Merayakan Pernikahan Kami</p>
         </div>
         <div class="container">
             <div class="row text-center">
-                <div class="col-xs-5 mb-3">
-                    <img src="images/wanita.jpg" title="jefry" class="imgrounded">
+                <div class="col-5 mb-3">
+                    <img src="images/wanita.jpg" data-aos="flip-left" data-aos-duration="1800" title="jefry"
+                        class="imgrounded">
                 </div>
-                <div class="col-xs-2 mb-3 text-center">
+                <div class="col-2 mb-3">
                     <div class="position-absolute top-50 start-50 translate-middle">
-                        <span>&</span>
+                        <h4 class="display-3">&</h4>
                     </div>
+                   
                 </div>
-                <div class="col-xs-5 mb-3">
-                    <img src="images/pria.jpg" title="jefry" class="imgrounded">
+                <div class="col-5 mb-3">
+                    <img src="images/pria.jpg" data-aos="flip-right" data-aos-duration="1800" title="jefry"
+                        class="imgrounded">
                 </div>
             </div>
 
             <div class="row text-center hal-3">
-                <div class="col-xs-5 mb-3">
+                <div class="col-5 mb-3">
                     <div class="text">
-                        <h2 class="text-center">Leiya Rohmatun Najid</h2>
+                        <h2 class="text-center" data-aos="fade-up" data-aos-duration="1600">Leiya Najid</h2>
                         <hr class="garis-pemisah">
-                        <p class="txt-standart text-center">Putri Dari Bapak :</p>
-                        <p class="txt-standart text-center">Mr. Sean Cagle
+                        <p class="txt-standart text-center" data-aos="fade-up" data-aos-duration="1800">Putri Dari Bapak
+                            :</p>
+                        <p class="txt-standart text-center" data-aos="fade-up" data-aos-duration="2000">Mr. Sean Cagle
                         </p>
-                        <a href="#" class="fa fa-instagram instagram"></a>
-                        <a href="#" class="fa fa-facebook facebook"></a>
-                        <a href="#" class="fa fa-twitter twitter"></a>
+                        <a href="#" class="fa fa-instagram instagram" data-aos="zoom-in" data-aos-duration="1800"></a>
+                        <a href="#" class="fa fa-facebook facebook" data-aos="zoom-in" data-aos-duration="1800"></a>
+                        <a href="#" class="fa fa-twitter twitter" data-aos="zoom-in" data-aos-duration="1800"></a>
                     </div>
                 </div>
-                <div class="col-xs-2 mb-3 text-center">
+                <div class="col-2 mb-3 text-center">
                 </div>
-                <div class="col-xs-5 mb-3">
-                    <h2 class="text-center">Jefry Julia Rafi</h2>
+                <div class="col-5 mb-3">
+                    <h2 class="text-center" data-aos="fade-up" data-aos-duration="1600">Jefry Rafi</h2>
                     <hr class="garis-pemisah">
-                    <p class="txt-standart text-center">Putra Dari Bapak :</p>
-                    <p class="txt-standart text-center">Mr. Shawn Clarke
+                    <p class="txt-standart text-center" data-aos="fade-up" data-aos-duration="1800">Putra Dari Bapak :
                     </p>
-                    <a href="#" class="fa fa-instagram instagram"></a>
-                    <a href="#" class="fa fa-facebook facebook"></a>
-                    <a href="#" class="fa fa-twitter twitter"></a>
+                    <p class="txt-standart text-center" data-aos="fade-up" data-aos-duration="2000">Mr. Shawn Clarke
+                    </p>
+                    <a href="#" class="fa fa-instagram instagram" data-aos="zoom-in" data-aos-duration="1800"></a>
+                    <a href="#" class="fa fa-facebook facebook" data-aos="zoom-in" data-aos-duration="1800"></a>
+                    <a href="#" class="fa fa-twitter twitter" data-aos="zoom-in" data-aos-duration="1800"></a>
                 </div>
             </div>
         </div>
@@ -190,49 +256,56 @@
     <!-- hal-4 -->
     <div class="container-fluid banner3">
         <div class="container pt-5 pb-5">
-            <div class="bungkus-hal-3 pt-5 pb-5 text-center">
+            <div id="waktu" class="bungkus-hal-3 pt-5 pb-5 text-center">
                 <div class="text-center">
-                    <h1 class="display-6">Countdown</h1>
-                    <h1 class="display-6">To Our Happy Day</h1>
-                    <h2 id="demo" class="demo"></h2>
-                    <p class="display-7">"The highest happiness on earth is the happiness of marriage."
+                    <h1 class="display-6" data-aos="fade-up" data-aos-duration="1600">Countdown</h1>
+                    <h1 class="display-6" data-aos="fade-up" data-aos-duration="1600">To Our Happy Day</h1>
+                    <h2 id="demo" class="demo" data-aos="fade-up" data-aos-duration="1600"></h2>
+                    <p class="display-7" data-aos="fade-up" data-aos-duration="1600">"The highest happiness on earth is
+                        the happiness of marriage."
                     </p>
-                    <p class="display-9">William Lyon Phelps</p>
+                    <p class="display-9" data-aos="fade-up" data-aos-duration="1600">William Lyon Phelps</p>
                 </div>
-                <img src="images/img_bg_2.jpg" class="image-hal-3">
+                <img src="images/img_bg_2.jpg" data-aos="zoom-in" data-aos-duration="1800" class="image-hal-3">
                 <div class="fas fa-heart logo-hal-3"></div>
                 <div class="row pt-3">
                     <div class="col-sm-6">
-                        <H2 class="text-center">Akad Nikah</H2>
-                        <i class="far fa-calendar-alt"></i>
-                        <i class="logo">29, Juni 2023</i>
+                        <H2 class="text-center" data-aos="fade-up" data-aos-duration="1000">Akad Nikah</H2>
+                        <div data-aos="fade-up" data-aos-duration="1600">
+                            <i class="far fa-calendar-alt"></i>
+                            <i class="logo">29, Juni 2023</i>
+                            <br>
+                            <i class="far fa-clock"></i>
+                            <i class="logo">10.00 - 12.00 WIB</i>
+                            <BR>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="logo">Jl. Jendral Sudirman No. 15
+                                Kec. Rogojampi Kab. Banyuwangi
+                            </i>
+                        </div>
                         <br>
-                        <i class="far fa-clock"></i>
-                        <i class="logo">10.00 - 12.00 WIB</i>
-                        <BR>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <i class="logo">Jl. Jendral Sudirman No. 15
-                            Kec. Rogojampi Kab. Banyuwangi
-                        </i>
                         <br>
-                        <br>
-                        <a type="button" class="btn btn-warning pt-3"> Cek Lokasi</a>
+                        <a type="button" data-aos="fade-up" data-aos-duration="1600" class="btn btn-warning pt-3"> Cek
+                            Lokasi</a>
                     </div>
                     <div class="col-sm-6">
-                        <H2 class="text-center">Resepsi Pernikahan</H2>
-                        <i class="far fa-calendar-alt"></i>
-                        <i class="logo">01, Juli 2023</i>
+                        <div data-aos="fade-up" data-aos-duration="1000">
+                            <H2 class="text-center">Resepsi Pernikahan</H2>
+                            <i class="far fa-calendar-alt"></i>
+                            <i class="logo">01, Juli 2023</i>
+                            <br>
+                            <i class="far fa-clock"></i>
+                            <i class="logo">10.00 - 21.00 WIB</i>
+                            <BR>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="logo">Jl. Jendral Sudirman No. 15
+                                Kec. Rogojampi Kab. Banyuwangi
+                            </i>
+                        </div>
                         <br>
-                        <i class="far fa-clock"></i>
-                        <i class="logo">10.00 - 21.00 WIB</i>
-                        <BR>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <i class="logo">Jl. Jendral Sudirman No. 15
-                            Kec. Rogojampi Kab. Banyuwangi
-                        </i>
                         <br>
-                        <br>
-                        <a type="button" class="btn btn-warning pt-3"> Cek Lokasi</a>
+                        <a type="button" data-aos="fade-up" data-aos-duration="1000" class="btn btn-warning pt-3"> Cek
+                            Lokasi</a>
                     </div>
                 </div>
             </div>
@@ -241,15 +314,16 @@
     <!-- HAL-5 -->
     <div class="container-fluid banner4 pb-5">
         <div class="container pt-4 text-center">
-            <h2 class="display-6">The Journey</h2>
-            <h1 class="display-6">Our Love Story</h1>
-            <h2 id="demo" class="demo"></h2>
-            <p class="display-7">"The highest happiness on earth is the happiness of marriage."
+            <h2 class="display-6" data-aos="fade-up" data-aos-duration="1600">The Journey</h2>
+            <h1 class="display-6" data-aos="fade-up" data-aos-duration="1800">Our Love Story</h1>
+            <p class="display-7" data-aos="fade-up" data-aos-duration="2000">"The highest happiness on earth is the
+                happiness of marriage."
             </p>
-            <p class="display-9">William Lyon Phelps</p>
+            <p class="display-9" data-aos="fade-up" data-aos-duration="2100">William Lyon Phelps</p>
 
             <!-- crousel -->
-            <div id="carouselExampleCaptions" class="carousel slide carousel-css" data-bs-ride="carousel">
+            <div id="carouselExampleCaptions" data-aos="zoom-in" data-aos-duration="1000"
+                class="carousel slide carousel-css" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -297,11 +371,11 @@
 
     <!-- HAL-5 -->
 
-    <div class="container-fluid banner5">
+    <div id="galeri" class="container-fluid banner5">
         <div class="container pt-3 text-center">
-            <h5 class="display-6 text-black">A Glimpse of</h5>
-            <h4 class="display-6 text-black">Our Moments</h4>
-            <div class="ratio ratio-1x1">
+            <h5 class="display-6 text-black" data-aos="fade-up" data-aos-duration="1600">A Glimpse of</h5>
+            <h4 class="display-6 text-black pb-4" data-aos="fade-up" data-aos-duration="1800">Our Moments</h4>
+            <div class="ratio ratio-1x1 pt-4 pb-4" data-aos="zoom-in" data-aos-duration="2000">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/nDTo_Xh1P2U"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -309,50 +383,31 @@
             </div>
             <br>
             <br>
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                        aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                        aria-label="Slide 5"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
-                        aria-label="Slide 6"></button>
-                </div>
+            <div id="carouselExampleControls" data-aos="zoom-in" data-aos-duration="2000" class="carousel slide"
+                data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="images/cr1.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="images/cr2.jpg" class="d-block w-100" alt="...">
+                        <img src="/images/cr2.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="images/cr3.jpg" class="d-block w-100" alt="...">
+                        <img src="/images/cr3.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="images/cr2.jpg" class="d-block w-100" alt="...">
+                        <img src="/images/cr2.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="images/cr3.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/cr2.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/cr3.jpg" class="d-block w-100" alt="...">
+                        <img src="/images/cr3.jpg" class="d-block w-100" alt="...">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
@@ -363,31 +418,35 @@
 
     <!-- BANNER 6 -->
 
-    <div class="container-fluid banner6 pb-5 pt-5 text-center">
-        <h5 class="display-6 text-white">Share Love</h5>
-        <p class="display-7">"Your prayers & blessings at our wedding is enough as a gift, but if you want to give more,
+    <div id="kado" class="container-fluid banner6 pb-5 pt-5 text-center">
+        <h1 class="display-6 text-white" data-aos="fade-up" data-aos-duration="1600">Share Love</h1>
+        <br>
+        <p class="display-7" data-aos="fade-up" data-aos-duration="1600">"Your prayers & blessings at our wedding is
+            enough as a gift, but if you want to give more,
             we are happy to receive it and it will complement our happiness even more "
         </p>
-        <div class="container">
-            <div class="bungkus-barcode p-4">
+        <div class="container pt-5 pb-5">
+            <div class="bungkus-barcode p-4" data-aos="fade-up" data-aos-duration="1600">
                 <img src="images/barcode.jpg" class="barcode">
                 <h5 class="display-7 pt-3 text-black">BANK MANDIRI</h5>
                 <h6 class="display-7 text-black" id="p1">3492832882736</h6>
                 <button class="btn btn-warning" onclick="copyToClipboard('#p1')">Copy</button>
                 <br>
                 <br>
-                <button href="#" class="btn btn-warning fa fa-whatsapp"> Confirm</button>
+                <button href="#" data-aos="fade-up" data-aos-duration="1600" class="btn btn-warning fa fa-whatsapp">
+                    Confirm</button>
             </div>
             <br>
             <br>
-            <div class="bungkus-barcode p-4">
+            <div class="bungkus-barcode p-4" data-aos="fade-up" data-aos-duration="1600">
                 <img src="images/barcode.jpg" class="barcode">
                 <h5 class="display-7 pt-3 text-black">BANK MANDIRI</h5>
                 <h6 class="display-7 text-black" id="p1">3492832882736</h6>
                 <button class="btn btn-warning" onclick="copyToClipboard('#p1')">Copy</button>
                 <br>
                 <br>
-                <button href="#" class="btn btn-warning fa fa-whatsapp"> Confirm</button>
+                <button href="#" data-aos="fade-up" data-aos-duration="1600" class="btn btn-warning fa fa-whatsapp">
+                    Confirm</button>
             </div>
         </div>
     </div>
@@ -395,12 +454,12 @@
     <!-- BANNER7 -->
     <section class="container-fluid banner7">
         <div class="container text-center">
-            <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                <h4 class="display-6">Thank You</h4>
+            <div>
+                <h4 class="display-6" data-aos="fade-up" data-aos-duration="1600">Thank You</h4>
                 <br>
-                <h3 class="display-3">Jefry & Leiya</h3>
+                <h3 class="display-3" data-aos="fade-up" data-aos-duration="1600">Jefry & Leiya</h3>
                 <br>
-                <h7>
+                <h7 data-aos="fade-up" data-aos-duration="1000">
                     The Big Family of
                     Lord Montague & Lady Montague
                     Lord Capulet & Lady Capulet
@@ -428,21 +487,27 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
-    <!-- COPYBUTTON -->
-    <script>
-        function copyToClipboard(element) {
-            var $temp = $("<input>");
-            $("body").append($temp);
-            $temp.val($(element).text()).select();
-            document.execCommand("copy");
-            $temp.remove();
-        }
-    </script>
 
 </body>
 
 </html>
 
+<!-- COPYBUTTON -->
+<script>
+    function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+    }
+</script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 <!--HITUNG MUNDUR-->
 <script>
@@ -475,3 +540,5 @@
         }
     }, 1000);
 </script>
+
+<!-- audio -->
