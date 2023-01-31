@@ -1,0 +1,478 @@
+/* navbar bottom */
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #FFFFFF;
+}
+
+.navigation {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  background-position: bottom;
+  background: #2f2f2f;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.navigation ul {
+  position: relative;
+  display: flex;
+  width: 400px;
+  z-index: 1000;
+  z-index: 1000;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 80px;
+  height: 80px;
+  z-index: 1;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 85px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.navigation ul li a:hover .icon {
+  color: rgba(255, 255, 255, 1);
+}
+
+.navigation ul li.active a .icon {
+  transform: translateY(-8px);
+  color: #29fd53;
+}
+
+.navigation ul li a .text {
+  position: absolute;
+  opacity: 0;
+  font-weight: 400;
+  font-size: 0.6em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  transform: translateY(0px);
+}
+
+.navigation ul li.active a .text {
+  transform: translateY(16px);
+  opacity: 1;
+}
+
+.indicator {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.indicator::before {
+  content: '';
+  position: absolute;
+  bottom: 14px;
+  width: 80%;
+  height: 16px;
+
+
+  border-radius: 10px;
+}
+
+.navigation ul li:nth-child(2).active~.indicator {
+  transform: translateX(calc(80px * 1));
+}
+
+.navigation ul li:nth-child(3).active~.indicator {
+  transform: translateX(calc(80px * 2));
+}
+
+.navigation ul li:nth-child(4).active~.indicator {
+  transform: translateX(calc(80px * 3));
+}
+
+.navigation ul li:nth-child(5).active~.indicator {
+  transform: translateX(calc(80px * 4));
+}
+
+/*font*/
+@font-face {
+  font-family: 'icomoon';
+  src: url(/fonts/icomoon/icomoon.ttf);
+}
+
+@font-face {
+  font-family: 'latin';
+  src: url(/fonts/lambretta/Lambretta\ Script\ Stamp.otf);
+}
+
+@font-face {
+  font-family: 'standart';
+  src: url(/fonts/bootstrap/glyphicons-halflings-regular.ttf);
+}
+
+.display-6 {
+  font-family: 'icomoon';
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  word-spacing: -10px;
+}
+
+.display-3 {
+  font-family: 'latin';
+  font-size: 50px;
+  color: white;
+  word-spacing: -1px;
+}
+
+.txt-coklat {
+  font-family: 'latin';
+  font-size: 50px;
+  color: rgb(156, 77, 24);
+}
+
+.txt-hitam {
+  font-family: 'icomoon';
+  font-size: 30px;
+  color: rgb(39, 38, 38);
+}
+
+.txt-standart {
+  font-family: 'standart';
+  font-size: 20px;
+  color: rgb(39, 38, 38);
+  word-spacing: -15px;
+}
+
+
+.demo {
+  color: rgb(255, 255, 255);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 35px;
+  font-weight: bolder;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*font akhir*/
+
+.banner {
+  background: rgba(0, 0, 0, 0.4) url('/images/img_bg_2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  padding-top: 10%;
+  padding-bottom: 15%;
+  background-attachment: fixed;
+  background-position: center;
+  max-width: 100%;
+  height: auto;
+}
+
+.banner2 {
+  background: url('/images/img_bg_1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 5%;
+  padding-bottom: 15%;
+  background-position: center;
+  max-width: 100%;
+  height: auto;
+}
+
+.banner5 {
+  background: url('/images/img_bg_1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 5%;
+  padding-bottom: 15%;
+  background-position: center;
+  max-width: 100%;
+  height: auto;
+}
+
+.garis-pemisah {
+  border-top: 2px solid saddlebrown;
+}
+
+
+
+
+
+/*SHAPE DIVIDER top*/
+.custom-shape-divider-bottom-1675089837 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1675089837 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-bottom-1675089837 .shape-fill {
+  fill: #FFFFFF;
+}
+/*hal-2*/
+
+.hal-2 {
+  padding-top: 30px;
+}
+
+.foto {
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+}
+
+.kotak {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.hal-2 h2 {
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(156, 77, 24);
+  font-family: 'latin';
+}
+
+.hal-3 h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(156, 77, 24);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.hal-2 span {
+  padding-bottom: 20px;
+}
+
+/* ISI BANNER 2 */
+
+.imgrounded {
+  width: 300px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10%;
+  padding: 10px;
+  border-image: 10px;
+  border-color: black;
+  /* transition: .5s ease; */
+  opacity: 100;
+}
+
+/* .row:hover .imgrounded { 
+  opacity: 1;
+} */
+
+.position-absolute span {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(156, 77, 24);
+  font-family: 'latin';
+}
+
+/* medsos */
+.instagram {
+  font-size: 30px;
+  color: rgb(156, 77, 24);
+  padding: 10px;
+  text-decoration: none;
+}
+
+.facebook {
+  font-size: 30px;
+  color: rgb(156, 77, 24);
+  padding: 10px;
+  text-decoration: none;
+}
+
+.twitter {
+  font-size: 30px;
+  color: rgb(156, 77, 24);
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* HAL-3 */
+.banner3 {
+  background-color: rgb(156, 77, 24);
+  color: rgb(156, 77, 24);
+}
+
+.bungkus-hal-3 {
+  background-color: rgb(185, 122, 80);
+  border-radius: 100px;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.image-hal-3 {
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 100px;
+}
+
+.logo-hal-3 {
+  font-size: 100px;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.banner3 h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* BANNER4 */
+.banner4 {
+  background-color: rgb(206, 101, 30);
+  color: rgb(255, 150, 79);
+}
+
+/* BANNER5 */
+
+.banner5 h5 {
+  font-size: 25px;
+  color: rgb(156, 77, 24);
+}
+
+.banner5 h4 {
+  font-size: 35px;
+  color: rgb(156, 77, 24);
+}
+
+/* BANNER6 */
+.banner6 {
+  background-color: rgb(206, 101, 30);
+  color: rgb(255, 150, 79);
+}
+
+.banner6 h5 {
+  font-size: 40px;
+}
+
+.bungkus-barcode {
+  background-color: rgb(255, 255, 255);
+  border-radius: 100px;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.barcode {
+  width: 50%;
+  height: auto;
+  max-width: 100%;
+}
+
+.banner6 h5 {
+  font-size: 24px;
+}
+
+.banner6 h6 {
+  font-size: 15px;
+}
+
+.copy-button {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative
+}
+
+.tip {
+  background-color: #263646;
+  padding: 0 14px;
+  line-height: 27px;
+  position: absolute;
+  border-radius: 4px;
+  z-index: 100;
+  color: #fff;
+  font-size: 12px;
+  animation-name: tip;
+  animation-duration: .6s;
+  animation-fill-mode: both
+}
+
+.tip:before {
+  content: "";
+  background-color: #263646;
+  height: 10px;
+  width: 10px;
+  display: block;
+  position: absolute;
+  transform: rotate(45deg);
+  top: -4px;
+  left: 17px
+}
+
+#copied_tip {
+  animation-name: come_and_leave;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  bottom: -35px;
+  left: 2px
+}
+
+.text-line {
+  font-size: 14px
+}
+
+.banner7 {
+    background: rgba(0, 0, 0, 0.4) url('/images/img_bg_2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding-top: 10%;
+    padding-bottom: 100px;
+    margin-bottom:80px ;
+    background-position: center;
+    max-width: 100%;
+    height: auto;
+}
